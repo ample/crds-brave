@@ -1,17 +1,27 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: "./entry.js",
+  entry: "./src/app.js",
   output: {
     path: __dirname + '/dist',
     filename: "bundle.js"
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      title: 'Brave',
+      template: './src/index.html'
+    })
   ],
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" }
+      {
+        test: /brave\/[^\.]*\.html$/,
+        loader: 'ng-cache?prefix=[dir]'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+      }
     ]
   }
 };
