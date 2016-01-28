@@ -1,12 +1,13 @@
 (function() {
   'use strict';
 
-  require('./templates/hosts.html');
-  require('./templates/participants.html');
-  require('./templates/welcome.html');
+  require('./host/index.html');
+  require('./join/index.html');
+  require('./common/welcome.html');
 
   angular.module('crossroads', ['ui.router']).
-  controller('BraveController', require('./brave.controller')).
+  controller('BraveJoinController', require('./brave.join.controller')).
+  controller('BraveHostController', require('./brave.host.controller')).
   config(require('./brave.routes'));
 
 })();
