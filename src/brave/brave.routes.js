@@ -7,17 +7,19 @@
   function BraveRoutes($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('welcome', {
-        url: "/welcome",
-        templateUrl: "templates/welcome.html"
+        url: '/welcome',
+        templateUrl: 'common/welcome.html'
       })
-      .state('participants', {
-        url: "/participants",
-        templateUrl: "templates/participants.html"
+      .state('join', {
+        url: '/join',
+        controller: 'BraveJoinController',
+        templateUrl: 'join/index.html'
       })
-      .state('hosts', {
-        url: "/hosts",
-        templateUrl: "templates/hosts.html"
-      })
+      .state('host', {
+        url: '/host',
+        controller: 'BraveHostController',
+        templateUrl: 'host/index.html'
+      });
 
     $urlRouterProvider.otherwise('/welcome');
   }
