@@ -15,7 +15,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /brave\/[^\.]*\.html$/,
+        test: /src\/brave\/[^\.]*\.html$/,
         loader: 'ng-cache?prefix=[dir]'
       },
       {
