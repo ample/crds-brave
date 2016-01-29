@@ -12,16 +12,21 @@
       })
       .state('join', {
         url: '/join',
-        controller: 'BraveJoinController',
+        controller: 'JoinController',
         templateUrl: 'join/index.html'
       })
       .state('host', {
         url: '/host',
-        controller: 'BraveHostController',
+        controller: 'HostController',
         templateUrl: 'host/index.html'
+      })
+      .state('login', {
+        url: '/login',
+        controller: 'LoginController',
+        templateUrl: 'login/index.html'
       });
 
-    $urlRouterProvider.otherwise('/welcome');
+    $urlRouterProvider.otherwise('/login');
   }
 
 })();
