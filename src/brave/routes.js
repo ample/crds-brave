@@ -12,17 +12,17 @@
       })
       .state('join', {
         url: '/join',
-        controller: 'JoinController',
+        controller: 'JoinController as join',
         templateUrl: 'join/index.html'
       })
       .state('host', {
         url: '/host',
-        controller: 'HostController',
+        controller: 'HostController as host',
         templateUrl: 'host/index.html'
       })
       .state('login', {
         url: '/login',
-        controller: 'LoginController',
+        controller: 'LoginController as login',
         templateUrl: 'login/index.html'
       });
 

@@ -1,3 +1,16 @@
 <div class="page-header">
   <h1>Host a Group</h1>
+  <div id="step-1" ng-show="host.showStep(1)">
+    <label for="group-name">Group Name</label>
+    <input type="text" id="group-name" placeholder="group name" ng-model="host.answers.group_name">
+  </div>
+  <div id="step-2" ng-show="host.showStep(2)">
+    <label for="zip-code">Zip Code</label>
+    <input type="text" id="zip-code" placeholder="zip code" ng-model="host.answers.zip_code">
+  </div>
+  <div id="controls">
+    <button ng-click="host.previous()">previous</button>
+    <button ng-click="host.next()">next</button>
+  </div>
+  <pre id="results">{{ host.answers }}</pre>
 </div>

@@ -2,17 +2,16 @@
   <h1>Login</h1>
 
   <div class="login">
-    <form>
+    <form id="login">
       <label for="email">Email</label>
       <input id="email" type="text" name="email" placeholder="email">
       <br>
       <label for="password">Password</label>
       <input id="password" type="password" placeholder="password">
       <br>
-      <div><a href="#">Forgot password</a></div>
-      <button>Register</button>
-      <button>Sign In</button>
+      <button ng-click="login.login()">Sign In</button>
     </form>
+    <div><a href="#">Forgot password</a></div>
   </div>
 
 </div>
